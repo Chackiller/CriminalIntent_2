@@ -8,6 +8,7 @@ public class Crime {
     private UUID mId;
     private String mTitle;
     private Date mDate;
+    private int position;
     private boolean mSolved;
 
     public Crime(){
@@ -42,4 +43,12 @@ public class Crime {
     public void setSolved(boolean solved) {
         mSolved = solved;
     }
+
+//    public int getPosition() {
+//        return position;
+//    }
+//
+//    public void setPosition(int position) {
+//        this.position = position;
+//    }
 }
