@@ -8,14 +8,19 @@ public class Crime {
     private UUID mId;
     private String mTitle;
     private Date mDate;
-    private int position;
     private boolean mSolved;
+    private String mSuspect;
+
+
 
     public Crime(){
-        mId = UUID.randomUUID();
-        mDate = new Date();
+        this(UUID.randomUUID());
     }
 
+    public Crime(UUID id){
+        mId = id;
+        mDate = new Date();
+    }
     public UUID getId() {
         return mId;
     }
@@ -44,11 +49,15 @@ public class Crime {
         mSolved = solved;
     }
 
-//    public int getPosition() {
-//        return position;
-//    }
-//
-//    public void setPosition(int position) {
-//        this.position = position;
-//    }
+    public String getSuspect() {
+        return mSuspect;
+    }
+
+    public void setSuspect(String suspect) {
+        mSuspect = suspect;
+    }
+
+    public String getPhotoFilename() {
+        return "IMG_" + getId().toString() + ".jpg";
+    }
 }
